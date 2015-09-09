@@ -1,0 +1,2431 @@
+/* liny/css/main.css
+*/
+
+/* standard schrift; Größen: 11px / kleineres 10px (compact) / kleines 9px (title/descriptions) */
+body, div, table, td {
+  font-family:verdana,arial,helvetica,sans-serif;
+  font-size:12px;
+  font-weight:normal;
+}
+body, table, td {
+  color:#000000;
+}
+
+td {
+/* default-value für td-hintergrundfarbe: transparent
+  (notwendig für darstellung mancher elemente in opera)  */
+  background-color:transparent;
+}
+
+.fullsize {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  border: 0px;
+  padding: 0px;
+  border-collapse:collapse;
+}
+
+a, a:visited, a:link, a:active, a:hover {
+  font-family:verdana,arial,helvetica,sans-serif;
+  color:#C30F08;
+  font-weight:normal;
+  font-size:12px;
+}
+
+input.ticker {
+  width:440px;
+  height:26px;
+  font-size:11px;
+  padding-top:4px;
+  border:2px solid #CCCCCC;
+}
+
+/* bodys */
+/* lay-page-<type>-<area>-<render>-body */
+
+/* mit Verlaufshintergrund für Content
+*/
+body.lay-page.type-splash,
+/*
+.lay-page-splash-portal-narrow-body,
+.lay-page-splash-portal-body,
+*/
+body.lay-page.type-news,
+/*
+.lay-page-news-portal-body,
+.lay-page-news-foyer-body,
+*/
+body.lay-page.type-news,
+/*
+.lay-page-info-portal-body,
+.lay-page-info-foyer-body,
+*/
+body.lay-page.type-workshell,
+body.lay-page.type-shell,
+/*
+.lay-page-shell-course-body,
+.lay-page-shell-workspace-body,
+*/
+body.lay-page.type-main,
+/*
+.lay-page-main-catalog-body,
+.lay-page-main-portal-body,
+.lay-page-main-foyer-body,
+.lay-page-main-course-body,
+.lay-page-main-wbt-body,
+.lay-page-main-site-body,
+.lay-page-main-workspace-body,
+*/
+body.lay-page.type-report,
+/*
+.lay-page-report-course-body,
+.lay-page-report-wbt-body,
+.lay-page-report-site-body,
+.lay-page-report-portal-body,
+.lay-page-report-foyer-body,
+.lay-page-report-workspace-body,
+*/
+body.lay-page.type-help,
+/*
+.lay-page-help-course-body,
+.lay-page-help-help-body,
+.lay-page-help-foyer-narrow-body,
+*/
+body.lay-page.type-form,
+body.lay-page.type-tools,
+body.browse-page {
+  margin:0px;
+  padding:0px;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/pageBg.jpg');
+  background-repeat:repeat-x;
+  background-color:white;
+  background-attachment:fixed;
+  width:100%;
+  height:100%;
+  /*overflow:hidden;*/
+}
+/* nicht in pad-frames */
+body.lay-page.type-shell.area-pad {
+  background: none;
+}
+/* nur ie */
+* html body.lay-page.type-splash,
+* html body.lay-page.type-news,
+* html body.lay-page.type-news,
+* html body.lay-page.type-workshell,
+* html body.lay-page.type-shell,
+* html body.lay-page.type-main,
+* html body.lay-page.type-report,
+* html body.lay-page.type-help,
+* html body.lay-page.type-form,
+* html body.lay-page.type-tools {
+  /*overflow:hidden;*/
+}
+.lay-page-main,
+/*.lay-page-splash,*/
+.lay-page-news,
+.lay-page-info,
+.lay-page-shell,
+.lay-page-workshell,
+.lay-page-report,
+.lay-page-help,
+.lay-page-form,
+.browse-tree {
+  border:1px solid #D9D9D9;
+  background-color:white;
+  padding:10px;
+  position:absolute;
+  left:10px;
+  right:10px;
+  top:10px;
+  bottom:10px;
+  overflow:auto;
+  width:auto;
+  height:auto;
+}
+* html .lay-page-main,
+* html .lay-page-splash,
+* html .lay-page-news,
+* html .lay-page-info,
+* html .lay-page-shell,
+* html .lay-page-workshell,
+* html .lay-page-report,
+* html .lay-page-help,
+* html .lay-page-form {
+  width: 97%;
+  height: 96%;
+}
+
+/*cstm: cm140729 größere Schrift für ar*/
+body[dir=rtl],
+body[dir=rtl] div,
+body[dir=rtl] td,
+body[dir=rtl] a,
+body[dir=rtl] .area-portal a,
+body[dir=rtl] .area-portal a:visited,
+body[dir=rtl] .area-portal a:link,
+body[dir=rtl] .area-portal a:active,
+body[dir=rtl] .area-portal a:hover,
+body[dir=rtl] .area-foyer a,
+body[dir=rtl] .area-foyer a:visited,
+body[dir=rtl] .area-foyer a:link,
+body[dir=rtl] .area-foyer a:active,
+body[dir=rtl] .area-foyer a:hover,
+body[dir=rtl] .area-module a,
+body[dir=rtl] .area-module a:visited,
+body[dir=rtl] .area-module a:link,
+body[dir=rtl] .area-module a:active,
+body[dir=rtl] .area-module a:hover,
+body[dir=rtl] .area-pad a,
+body[dir=rtl] .area-pad a:visited,
+body[dir=rtl] .area-pad a:link,
+body[dir=rtl] .area-pad a:active,
+body[dir=rtl] .area-pad a:hover
+ {
+  font-size: 18px !important;
+}
+
+
+
+body.lay-page.type-splash.area-portal {
+  /* bei splash-seite ohne frame-margin und ohne scroll-bars */
+  margin:0;
+  overflow:hidden;
+}
+.lay-page-plain-pad-body {
+  /* für buddychat/xxLayout.xhtml */
+  margin: 10px;
+}
+
+/*
+
+.lay-page-browse-course-body,
+.lay-page-browse-wbt-body {
+  background-color:#CCCCCC;
+}
+
+.lay-page-browse-course-body .lay-div-box,
+.lay-page-browse-wbt-body .lay-div-box {
+  margin:0px;
+  padding:2px;
+}
+
+.lay-page-main-wbt-body {
+  margin:10px;
+}
+
+/* --------------------------------------------------------------
+*/
+
+/* lay-page */
+
+.lay-page-tools-stylewrapper {
+  border:1px solid #D9D9D9;
+  background-color:white;
+  padding:10px;
+  position:absolute;
+  left:25px;
+  right:10px;
+  top:10px;
+  bottom:10px;
+  overflow:auto;
+  width:auto;
+  height:auto;
+}
+* html .lay-page-tools-stylewrapper {
+  /*width: 97%;
+  height: 96%;*/
+}
+.lay-page-tools-stylewrapper .ui-pane-title-label-simple {
+  /* Tools-Überschrift */
+  margin: 0px auto 20px 15px;
+}
+.lay-page-tools {
+  /* height: 94%; */ /* hat seiteneffekte beim scrollen in ff, sa; pane zu klein */
+  /*height: auto; hat seiteneffekte auf width und einrückungen im ie */
+}
+
+.lay-page-title-course-logo,
+.lay-page-title-wbt-logo {
+  width:100%;
+  height:80px;
+  border:0px;
+}
+.lay-page-title-course-logo-logo,
+.lay-page-title-wbt-logo-logo {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/layPageLogoBg.gif');
+  background-repeat:repeat-x;
+  padding-left: 20px;
+  vertical-align:middle;
+  width:205px;
+}
+.lay-page-title-course-logo-text,
+.lay-page-title-wbt-logo-text {
+  vertical-align:middle;
+  color:#8FA9C2;
+  font-size:16px;
+  font-weight: normal;
+  white-space:nowrap;
+}
+
+.lay-page-logo {
+  width:100%;
+  height:80px;
+}
+
+body.lay-page.type-logo,
+body.lay-page.type-title {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/headerBg-welle_lang.jpg');
+  background-position:top left;
+}
+body.lay-page.type-logo .login-user-info {
+  padding-left:10px;
+  font-size:9px;
+  text-align:left;
+}
+body.lay-page.type-logo .logo-links {
+  float:right;
+  width:50%;
+  height:100%;
+}
+body.lay-page.type-logo .login-info,
+body.lay-page.type-logo .logout {
+  padding-right:25px;
+  font-size:9px;
+}
+body.lay-page.type-logo .user-info {
+  color: #8FA9C2;
+}
+body.lay-page.type-logo .login a,
+body.lay-page.type-logo .logout a {
+  font-size:9px;
+  color:#ECECEC;
+}
+body.lay-page.type-logo .logout a:hover {
+  text-decoration:none;
+}
+.lay-page-logo-workspace-body .lay-page-logo-center {
+  /* in wspc nicht zentrieren sondern mit padding */
+  text-align:left;
+  padding-left:4em;
+}
+
+.lay-page-logo-logo {
+  vertical-align:middle;
+  width:205px;
+}
+/* Wrapper-Element für das Logo-Image (ermöglicht Positionierung, ohne den Trenner usw. zu beeinflussen): */
+.lay-page-logo-image-stylewrapper {
+  padding-left:20px;
+}
+.lay-page-logo-center {
+  padding-top: 2px;
+  text-align:center;
+  vertical-align:middle;
+  color:#CCCCCC;
+}
+.lay-page-logo-right {
+  text-align:right;
+  padding-top: 2px;
+  padding-right:10px;
+  width:280px;
+}
+.lay-page-logo-right .lay-buttons-nav {
+  margin-left:18px;
+}
+.lay-page-title-workspace {
+  height:80px;
+  background-color:#CCCCCC;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/layPageTitleWrkspArchBg.jpg');
+  background-repeat:no-repeat;
+  /*font-weight:bold;*/
+  vertical-align:top;
+  color:#6388B3;
+  padding:0px 16px 11px;
+}
+.lay-page-title-workspace-path,
+.lay-page-title-workspace-path div {
+  color:#6388B3;
+}
+.lay-page-menubar {
+  height:20px;
+  background-color:#CCCCCC;
+}
+.lay-page-taskbar {
+  border:1px #CCCCCC;
+  border-style:solid none none;
+  height:30px;
+}
+/* optimiert auf 1024 x 768 mit splash in main */
+.lay-page-splash,
+.lay-page-splash-title {
+  width:100%;
+  line-height:1.6em;
+  padding:0px;
+}
+.lay-page-splash {
+  height:100%;
+}
+.lay-page-splash-title-text {
+  padding:20px 5px;
+  font-size:14px;
+  /*font-weight:bold;*/
+}
+.lay-page-splash-title em {
+  color:#C30F08;
+  font-style:normal;
+}
+
+.lay-page-content-default {
+  width:100%;
+  border:0px;
+}
+
+.lay-page-content-default-td {
+  vertical-align:top;
+  color:#979797;
+  /*font-weight:bold;*/
+}
+
+.lay-page-content-content a,
+.lay-page-content-content a:link,
+.lay-page-content-content a:visited,
+.lay-page-content-content a:active
+{
+  color:#C30F08;
+  text-decoration:none;
+}
+
+.lay-page-content-content a:hover
+{
+  color:#C30F08;
+  text-decoration:underline;
+}
+
+.lay-page-content-workshell {
+  width:100%;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/pageBg.jpg');
+  background-repeat: repeat-x;
+  background-color: white;
+  background-attachment:fixed;
+  border:0px;
+  vertical-align:top;
+}
+
+.lay-page-content-workshell-table {
+  width:100%;
+  border:0px;
+}
+
+.lay-page-main-img {
+  border:1px solid #C30F08;
+}
+.ui-pane-title-label-simple {
+  border:0px;
+  background-color: inherit;
+  width: auto;
+}
+.ui-pane-title.ui-pane-title-label-simple {
+  background-color: #FFFFFF;
+}
+
+.ui-pane-title-label-simple-label,
+.lay-page-compact-title,
+.lay-page-report-title,
+.lay-page-plain-title,
+.lay-page-main-title {
+  font-size:14px;
+  font-weight:normal;
+  color:#000000;
+}
+
+/* lay-page-tools */
+
+body.lay-page.type-tools .lay-page-tools-stylewrapper {
+  /* MISSING: Border-Farbe korrekt? */
+  border:1px solid #D9D9D9;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.lay-page-tools-foyer-body .lay-button-content-icon,
+.lay-page-tools-portal-body .lay-button-content-icon,
+.lay-page-tools-course-body .lay-button-content-icon,
+.lay-page-tools-module-body .lay-button-content-icon,
+.lay-page-tools-wbt-body .lay-button-content-icon,
+.lay-page-compact-foyer-body .lay-button-caption-icon {
+  /* MISSING: Entsorgen, wenn im xsl entfernt */
+  display: none;
+}
+body.lay-page.type-compact .lay-button-caption-label {
+  padding: 0px;
+}
+
+/* unterpunkte-marker ggf. ausblenden */
+body.lay-page.type-nav .lay-button-dir-separator-closed {
+  /* MISSING: Entsorgen, wenn im xsl entfernt */
+  display:none;
+}
+
+
+
+/* lay-page-title / lay-page-nav */
+
+.lay-page-title-lico {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/uiTableLabelBg.gif');
+  background-color:#CCCCCC;
+  width:100%;
+  border:0px;
+  vertical-align:middle;
+}
+.lay-page-title-lico-td {
+  vertical-align:top;
+  width:100%;
+}
+.lay-page-title-lico td font {
+  color:#000000;
+}
+
+.lay-page-nav-site,
+.lay-page-nav-wbt,
+.lay-page-nav-course {
+  /*background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/titleNavBg.jpg');
+  background-color:#FFFFFF;*/
+  width:100%;
+  vertical-align:middle;
+  padding-left:11px;
+  height:25px;
+}
+
+.lay-page-nav,
+.lay-page-title {
+  width:100%;
+  vertical-align:middle;
+  padding-left:11px;
+}
+
+body.lay-page.type-nav {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/titleNavBg.jpg');
+  background-color:#FFFFFF;
+}
+body.lay-page.type-nav .lay-page-nav-site,
+.lay-page-nav-course-body .lay-page-nav-course,
+.lay-page-nav-wbt-body .lay-page-nav-wbt {
+  margin-left:250px;
+}
+
+.lay-page-title-path,
+.lay-page-title-logo {
+  white-space:nowrap;
+  color:#FFFFFF;
+  vertical-align:middle;
+}
+.lay-page-title-title {
+  font-size:14px;
+  /*font-weight:bold;*/
+  white-space:nowrap;
+  color:#FFFFFF;
+}
+.lay-page-title-course-body .lay-page-title-title,
+.lay-page-title-wbt-body .lay-page-title-title {
+  color:#CC6633;
+  font-size:13px;
+}
+.lay-page-title-space {
+  width:100%;
+}
+
+
+/* lay-page-info */
+
+.lay-page-info {
+  background-color:#CCCCCC;
+  padding:0px 5px;
+  width:100%;
+}
+
+/* lay-page-footer / corner / about */
+
+body.lay-page.type-footer {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/footerBg-welle_lang.png');
+}
+
+.lay-page-footer {
+  height:24px;
+}
+
+.lay-page-footer .corner {
+  position:absolute;
+  top:7px;
+  left: 10px;
+}
+.lay-page-footer .about {
+  position:absolute;
+  top:7px;
+  right: 10px;
+}
+.lay-page-footer .legal {
+  position:absolute;
+  top: 8px;
+  left: 260px;
+}
+body.lay-page.type-about {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/footerBg-welle-rechts.png');
+  background-position:top right;
+}
+
+.lay-page-content-about-td {
+  text-align:left;
+  color:#FFFFFF;
+  padding-left:20px;
+  height:20px;
+}
+
+/* lay-page-nav-site und deren lay-buttons-nav
+*/
+
+.lay-page-nav-site .lay-buttons-nav {
+  padding:0px 0px;
+}
+.lay-page-nav-site .lay-buttons-nav-depth1 {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/layButtonsNav1Bg.gif');
+  background-color:#5175A0;
+  padding:2px 0px;
+  border:0px;
+}
+.lay-page-nav-site .lay-buttons-nav-depth2 {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/layButtonsNav2Bg.gif');
+  background-color:#EEEEEE;
+  padding:2px 0px;
+  border:0px;
+}
+.lay-page-nav-course .lay-buttons-nav {
+  padding:2px 0px;
+}
+
+
+/* lay-buttons */
+
+.lay-buttons-nav-pad {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/layButtonsNavPadBg.gif');
+  background-repeat:repeat-x;
+}
+.lay-buttons-nav-pad-title {
+  font-size:14px;
+}
+.lay-buttons-nav {
+  padding:2px;
+}
+.lay-buttons-nav .lay-button-caption-icon a {
+  /* ZZZ: nicht gut per xsl ausblendbar */
+  display:none;
+}
+.lay-buttons-path,
+.lay-buttons-path a {
+  font-size:10px;
+}
+
+/* meine Workspaces und Schnellstartlinks im Portal */
+
+.lay-buttons-main a,
+.lay-buttons-main a:link,
+.lay-buttons-main a:visited,
+.lay-buttons-main a:active,
+.lay-buttons-main a:hover,
+.lay-buttons-tools-table a,
+.lay-buttons-tools-table a:link,
+.lay-buttons-tools-table a:visited,
+.lay-buttons-tools-table a:active,
+.lay-buttons-tools-table a:hover {
+  /*font-size:11px;*/
+  line-height:150%;
+}
+
+.lay-page-nav-course-body .lay-buttons-nav a,
+.lay-page-nav-course-body .lay-buttons-nav a:link,
+.lay-page-nav-course-body .lay-buttons-nav a:visited,
+.lay-page-nav-course-body .lay-buttons-nav a:active,
+.lay-page-nav-wbt-body .lay-buttons-nav a,
+.lay-page-nav-wbt-body .lay-buttons-nav a:link,
+.lay-page-nav-wbt-body .lay-buttons-nav a:visited,
+.lay-page-nav-wbt-body .lay-buttons-nav a:active,
+.lay-page-nav .lay-buttons-nav a,
+.lay-page-nav .lay-buttons-nav a:link,
+.lay-page-nav .lay-buttons-nav a:visited,
+.lay-page-nav .lay-buttons-nav a:active,
+.lay-page-nav-site .lay-buttons-nav a,
+.lay-page-nav-site .lay-buttons-nav a:link,
+.lay-page-nav-site .lay-buttons-nav a:visited,
+.lay-page-nav-site .lay-buttons-nav a:active,
+.lay-page-title .lay-buttons-nav a,
+.lay-page-title .lay-buttons-nav a:link,
+.lay-page-title .lay-buttons-nav a:visited,
+.lay-page-title .lay-buttons-nav a:active  {
+  /*font-size:11px;*/
+  text-decoration:none;
+}
+.lay-page-nav-course-body .lay-buttons-nav a:hover,
+.lay-page-nav-wbt-body .lay-buttons-nav a:hover,
+.lay-page-nav .lay-buttons-nav a:hover,
+.lay-page-nav-site .lay-buttons-nav a:hover,
+.lay-page-title .lay-buttons-nav a:hover {
+  /*font-size:11px;*/
+  color:#000000;
+}
+
+.lay-page-logo .lay-buttons-nav a,
+.lay-page-logo .lay-buttons-nav a:link,
+.lay-page-logo .lay-buttons-nav a:visited,
+.lay-page-logo .lay-buttons-nav a:active {
+  font-size:9px;
+  color:#ECECEC;
+  text-decoration:none;
+}
+.lay-page-logo .lay-buttons-nav a:hover {
+  color:#C30F08;
+}
+.lay-page-logo .login-user-info a,
+.lay-page-logo .login-user-info a:visited,
+.lay-page-logo .login-user-info a:link,
+.lay-page-logo .login-user-info a:active,
+.lay-page-logo .login-user-info a:hover {
+  font-size:9px;
+  color:#ECECEC;
+  text-decoration:none;
+  background-image:url(/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/aLI.gif);
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-left: 10px;
+}
+
+body.lay-page.type-footer .lay-buttons-nav a,
+body.lay-page.type-footer .lay-buttons-nav a:link,
+body.lay-page.type-footer .lay-buttons-nav a:visited,
+body.lay-page.type-footer .lay-buttons-nav a:active {
+  color:#FFFFFF;
+  text-decoration:none;
+}
+
+/* lay-button typen */
+
+.lay-buttons-main-label {
+  /*font-weight:bold;*/
+}
+
+.lay-button-label-selected-current {
+  color:#858585;
+}
+
+/* tools: prinzipielle button Einstellungen in der Navigationsleiste */
+
+.lay-buttons.type-tools .lay-button-label,
+.lay-buttons.type-tools .lay-button-label-em,
+.lay-buttons.type-tools .lay-button-label-selected-current {
+  /*font-size:12px;*/
+  /*font-weight: normal;*/
+  padding-left:15px;
+  display: block;
+}
+
+.lay-buttons.type-tools .depth-2 .lay-button-label,
+.lay-buttons.type-tools .depth-3 .lay-button-label,
+.lay-buttons.type-tools .depth-4 .lay-button-label,
+.lay-buttons.type-tools .depth-2 .lay-button-label-em,
+.lay-buttons.type-tools .depth-3 .lay-button-label-em,
+.lay-buttons.type-tools .depth-4 .lay-button-label-em {
+  background: transparent url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/browse/pfeil-gelb.png') no-repeat top left;
+}
+.lay-buttons.type-tools .depth-2 .lay-button-label-selected-current,
+.lay-buttons.type-tools .depth-3 .lay-button-label-selected-current,
+.lay-buttons.type-tools .depth-4 .lay-button-label-selected-current {
+  background: transparent url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/browse/pfeil-grau.png') no-repeat top left;
+}
+
+/* grauer Hintergrund für derzeit gewählte Tools-Zeile: */
+.lay-button-tools-content-current {
+  background-color:#EDEDED;
+}
+
+.lay-button-tools-content a,
+.lay-button-tools-content-current a,
+.lay-button-tools-content a:link,
+.lay-button-tools-content-current a:link,
+.lay-button-tools-content a:visited,
+.lay-button-tools-content-current a:visited,
+.lay-button-tools-content a:active,
+.lay-button-tools-content-current a:active {
+  /*font-size:12px;*/
+  color:#C30F08;
+  text-decoration:none;
+}
+.lay-button-tools-content a:hover {
+  /*font-size:12px;*/
+  /*background-color:#EDEDED;*/
+  color:#000000;
+}
+
+.lay-button-tools-content-current a:hover {
+  /*font-size:12px;*/
+  color:#000000;
+  /*font-weight:bold;*/
+}
+.lay-button-tools-content.depth-2,
+.lay-button-tools-content-current.depth-2 {
+  padding-left: 15px;
+}
+
+.lay-button-tools-content.depth-3,
+.lay-button-tools-content-current.depth-3 {
+  padding-left: 30px;
+}
+
+.lay-button-tools-content.depth-4,
+.lay-button-tools-content-current.depth-4 {
+  padding-left: 45px;
+}
+
+.lay-buttons-tools-foyer-depth1 .lay-button-content-indent,
+.lay-buttons-tools-foyer-depth2 .lay-button-content-indent,
+.lay-buttons-tools-foyer-depth3 .lay-button-content-indent,
+.lay-buttons-tools-foyer-depth4 .lay-button-content-indent {
+  /* MISSING: Entsorgen, wenn im xsl entfernt */
+  /*display: none;*/
+}
+
+.lay-button-tools-label,
+.lay-button-tools-label-disabled {
+  /*font-size: 11px;*/
+  /*font-weight: bold;*/
+  color: #000000;
+  padding-left: 5px;
+}
+.lay-buttons-tools-table,
+.lay-buttons-tools-depth1,
+.lay-buttons-tools-depth2,
+.lay-buttons-tools-depth3 {
+  width:100%;
+  border:0px;
+  text-align:left;
+}
+.lay-buttons-tools-label {
+  vertical-align:middle;
+  /*font-weight:bold;*/
+  /*font-size:11px;*/
+  padding:2px 5px;
+}
+
+.lay-buttons-tools-portal-depth1,
+.lay-buttons-tools-foyer-depth1 {
+  /*background-position:top right;
+  width:100%;*/
+}
+.lay-buttons-tools-portal-depth2,
+.lay-buttons-tools-foyer-depth2 {
+  /*background-color:#EEEEEE;*/
+  /*background-repeat:repeat-y;
+  background-position:top right;
+  width:100%;*/
+}
+.lay-buttons-tools-portal-depth3,
+.lay-buttons-tools-foyer-depth3 {
+  /*background-color:#CCCCCC;*/
+  /*border-top:1px solid #CCCCCC;
+  width:100%;*/
+}
+.lay-buttons-tools-portal-depth4,
+.lay-buttons-tools-portal-depth5,
+.lay-buttons-tools-portal-depth6,
+.lay-buttons-tools-portal-depth7,
+.lay-buttons-tools-portal-depth8,
+.lay-buttons-tools-portal-depth9,
+.lay-buttons-tools-foyer-depth4,
+.lay-buttons-tools-foyer-depth5,
+.lay-buttons-tools-foyer-depth6,
+.lay-buttons-tools-foyer-depth7,
+.lay-buttons-tools-foyer-depth8,
+.lay-buttons-tools-foyer-depth9 {
+  /*background-color:#FFFFFF;*/
+  /*border-top:1px solid #CCCCCC;
+  width:100%;*/
+}
+.lay-buttons.type-tools.depth-0 {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/nav-trenner.gif');
+  background-repeat:no-repeat; /* dann hört der Strich ggf. zu früh auf ? doch -x ? */
+  background-position: bottom left;
+}
+.lay-buttons.type-tools .lay-button {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/nav-trenner.gif');
+  background-repeat:no-repeat; /* dann hört der Strich ggf. zu früh auf ? doch -x ? */
+  background-position: top left;
+  height: 25px;
+  width:100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  vertical-align:middle;
+}
+.lay-page-tools .lay-button-tools-portal-separator-vertend,
+.lay-page-tools .lay-button-tools-foyer-separator-vertend {
+  /*background-color:#CC6633;
+  position:relative;
+  left:251px;*/
+  /* MISSING right:1px wäre besser, aber nicht für älteren Browser */
+}
+/* Redesign-Vorgabe: Zeilenhöhe Tools 24px */
+.lay-button-tools-portal-content,
+.lay-button-tools-foyer-content,
+.lay-button-tools-module-content,
+.lay-button-tools-foyer-content-current,
+.lay-button-tools-portal-content-current,
+.lay-button-tools-module-content-current {
+  /*height:24px;
+  width:100%;
+  vertical-align:middle;*/
+}
+.lay-page-tools .lay-button-tools-portal-content,
+.lay-page-tools .lay-button-tools-foyer-content,
+.lay-page-tools .lay-button-tools-module-content,
+.lay-page-tools .lay-button-tools-foyer-content-current,
+.lay-page-tools .lay-button-tools-portal-content-current,
+.lay-page-tools .lay-button-tools-module-content-current {
+  /*padding-top: 5px;
+  padding-bottom: 5px;*/
+}
+
+.lay-button-tools-bottom2 {
+  /* MISSING: benötigt ? */
+  border-top:1px solid #CCCCCC;
+}
+
+.lay-button-tools-content-current,
+.lay-button-tools-content {
+  /*white-space:nowrap;*/
+}
+.lay-button-tools-content-img {
+  padding-left:5px;
+  width:10px;
+}
+
+.lay-button-tools-content a,
+.lay-button-tools-content a:link,
+.lay-button-tools-content a:visited,
+.lay-button-tools-content a:active {
+  /*font-size:11px;*/
+  color:#C30F08;
+  text-decoration:none;
+}
+.lay-button-tools-content a:hover  {
+  /*font-size:11px;*/
+  color:#C30F08;
+}
+
+.lay-button-label,
+.lay-button-label-disabled,
+.lay-button-label-selected-current {
+  /*font-size:11px;*/
+  padding-left:5px;
+  line-height:14px;
+}
+.lay-button-sitemap-td .lay-button-label {
+  /* padding-left NICHT in Tasks */
+  padding-left:0px;
+}
+.lay-buttons-tools-table .lay-button-label {
+  /* padding-left NICHT in Portlets; MISSING: Obsolet? */
+  /*padding-left:0px;*/
+}
+.lay-buttons.type-compact {
+  /* für IE, sonst nav-trenner.gif in portlets */
+  background-image:none;
+}
+.lay-buttons-nav {
+  /* für IE, sonst nav-trenner.gif in footer-, title-lang-btns */
+  background-image:none;
+}
+.lay-buttons.type-compact .lay-button-tools-content-img {
+  display: none;
+}
+.lay-buttons.type-compact .lay-button-label {
+  display: block;
+}
+.lay-page.type-compact .feed-title .lay-button-label {
+  padding-left: 0px;
+}
+.lay-button-content {
+  font-size:11px; /* überschreibe lib */
+}
+.lay-button-content-label a:focus,
+.lay-button-content-label a:active {
+  /* TEST highlighting in browse-frame */
+  color:#858585;
+  font-weight: bold;
+}
+.lay-button-content-label a:active .lay-button-label,
+.lay-button-content-label a:focus .lay-button-label {
+  /* TEST highlighting in browse-frame */
+  background: transparent url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/browse/pfeil-grau.png') no-repeat top left;
+}
+body > .lay-button-content {
+  padding:5px;
+}
+body.lay-page.type-compact > div,
+* html body.lay-page.type-compact div.lay-div {
+  /*font-size:11px;*/
+  margin-top:10px;
+  padding-left:10px;
+}
+body.lay-page.type-compact > div.feed-compact {
+  padding-left:0px;
+}
+.feed-compact .feed-title {
+  margin-bottom: 10px;
+}
+.feed-compact .feed-title a {
+  /*font-size: 11px;*/
+}
+.feed-compact .feed-info {
+  display:none;
+}
+.feed-compact .feed-date {
+  /*font-size: 11px;*/
+}
+
+.lay-button-nav-label {
+  /* background: transparent url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/browse/cockpitPfeil_open.gif') no-repeat center left; */
+  padding-right:5px;
+  padding-left:5px;
+  color:#CCCCCC;
+  white-space:nowrap;
+}
+.lay-button-nav-label-selected-current-stylewrapper {
+  display: block;
+  height: 100%;
+  padding-left:5px;
+  padding-right:5px;
+  margin-top:3px;
+  padding-top:5px;
+  padding-bottom:4px;
+  background: transparent url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/titleNavActiveBg.jpg') repeat-x bottom left;
+}
+.lay-button-nav-label-selected-current {
+  /* background: transparent url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/browse/cockpitPfeil_active.gif') no-repeat center left; */
+  padding-right:5px;
+  padding-left:5px;
+  font-weight:normal; /* wg. lib */
+  color:#C30F08;
+  white-space:nowrap;
+}
+
+/* Sonderfall: lay-button-nav-label in ui-pane-title (transparente Leiste, z.B. in WBTs) */
+.ui-pane-title-buttons-nav .lay-button-nav-label {
+  background:none;
+  color:#C30F08;
+  padding-left:0px;
+}
+.ui-pane-title-buttons-nav .lay-button-caption {
+  padding-left:5px;
+}
+
+
+.lay-button-sitemap {
+  border-top:solid 1px #FFFFFF;
+  border-bottom:solid 1px #FFFFFF;
+  white-space:nowrap;
+  padding:5px 0px;
+}
+
+.lay-buttons-quick-search input {
+  /*font-size:11px;*/
+  border:2px solid #CCCCCC;
+  height:17px;                                /* lay.frameset.title.height - 4 */
+  margin-right:3px;
+}
+.lay-button-lang-label-selected-current,
+.lay-button-lang-label-disabled,
+.lay-button-lang-label {
+  color:#ECECEC;
+  padding-left:24px;
+  padding-right:4px;
+  white-space:nowrap;
+}
+.lay-button-lang-label-selected-current {
+  color:#8FA9C2;
+}
+.lay-button-info-label-selected-current,
+.lay-button-info-label-disabled,
+.lay-button-info-label {
+  color:#FFFFFF;
+  padding-left:4px;
+  padding-right:24px;
+  white-space:nowrap;
+}
+.lay-page-footer .lay-button-info-label-selected-current,
+.lay-page-footer .lay-button-info-label-disabled,
+.lay-page-footer .lay-button-info-label {
+  font-size:9px;
+}
+.lay-button-label-icon {
+  width:5px;
+  height:40px;
+  vertical-align:middle;
+}
+
+.lay-buttons-catalog-nav-table {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/contentBg.jpg');
+  border:1px solid #5175A0;
+}
+
+/* lay-portlet */
+
+.lay-portlets-td {
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.lay-portlet {
+  width:100%;
+  background-color:#EEF0FF;
+  border:1px solid #979797;
+  margin: 0px;
+}
+.lay-portlet-title {
+  width:100%;
+  background-color:#C4CBD2;
+  color:#000000;
+  height: 24px;
+  padding-left: 10px;
+  font-weight: normal; /* wg. lib */
+}
+.lay-portlet-content {
+  background-color:#FFFFFF;
+}
+.lay-portlet-content a,
+.lay-portlet-content a:hover,
+.lay-portlet-content a:visited,
+.lay-portlet-content a:link,
+.lay-portlet-content a:active {
+  color:#C30F08;
+  /*font-size:11px;*/
+}
+body.lay-page.type-compact .lay-button-tools-content {
+  height: auto;
+  padding-top:1px;
+}
+body.lay-page.type-compact .lay-buttons-tools {
+  height: auto;
+  margin-top:10px;
+  margin-left: 5px;
+}
+body.lay-page.type-compact .feed-channel {
+  height: auto;
+  margin-top:10px;
+  margin-left: 10px;
+}
+
+/* tree.vjs baut auch lay-buttons-tools (anders als xsl)
+td.lay-buttons-tools-icons {
+  display:none;
+}
+td.lay-buttons-tools {
+  white-space: normal;
+}
+*/
+
+/* lay-infobox */
+
+.lay-page-info-box {
+  margin:5px;
+  width:100%;
+  border:1px solid #CCCCCC;
+}
+.lay-page-info-box-title {
+  background-color:#EEF0FF;
+  border:1px solid #FFFFFF;
+  padding:1px 8px;
+}
+.lay-page-info-box-image {
+  padding:0px 8px;
+}
+.lay-page-info-box-content {
+  padding:0px 8px;
+}
+.lay-infobox-content {
+  width:100%;
+  border:1px solid #CCCCCC;
+}
+.lay-infobox-content-title {
+  padding:5px 10px;
+}
+
+/* lay-markup */
+
+.lay-markup-par {
+  font-size:larger;
+}
+
+.lay-div-box {
+  background-color:#EEF0FF;
+  border:1px #CCCCCC;
+  border-style:none none solid;
+  padding:15px 20px;
+}
+.lay-div-box-empty {
+  padding:15px 20px;
+}
+.lay-div-box-title {
+  /*font-weight:bold;*/
+}
+
+.lib-login {
+  display:none;
+}
+
+
+/* --------------------------------------------------------------
+*/
+
+.nav-navchapter-nav td.nav-buttons {
+    padding-left: 5px;
+    padding-top: 2px;
+}
+
+
+.nav-navchapter-nav .nav-progress-bar,
+.nav-navchapter-nav .nav-progress-visited,
+.nav-navchapter-nav .nav-progress-visits,
+.nav-navchapter-nav .nav-progress-time,
+.nav-navchapter-nav .nav-progress-progress {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+
+
+/* --------------------------------------------------------------
+*/
+
+
+.pad-display a,
+.pad-message a,
+.pad-display a:link,
+.pad-message a:link,
+.pad-display a:visited,
+.pad-message a:visited,
+.pad-display a:active,
+.pad-message a:active
+{
+  color:#C30F08;
+  text-decoration:none;
+}
+
+.pad-display a:hover,
+.pad-message a:hover
+{
+  color:#C30F08;
+  text-decoration:underline;
+}
+
+
+/* --------------------------------------------------------------
+*/
+
+.vnl-page a,
+.vnl-page a:link,
+.vnl-page a:visited,
+.vnl-page a:active
+{
+  color:#C30F08;
+  text-decoration:none;
+}
+
+.vnl-page a:hover
+{
+  color:#C30F08;
+  text-decoration:underline;
+}
+
+/* --------------------------------------------------------------
+*/
+
+/* ui-pane */
+
+.ui-pane-tab {
+  width:98%;
+}
+.ui-pane-tab-content {
+  background-color:#FFFFFF;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/uiPaneContentBg.jpg');
+  background-repeat:repeat-x;
+  border-left:1px solid #CCCCCC;
+  border-right:1px solid #CCCCCC;
+  border-bottom:1px solid #CCCCCC;
+  padding:5px;
+}
+.ui-pane-tab-buttons {
+  border-bottom:1px solid #CCCCCC;
+}
+.ui-pane-tab-buttons-fill {
+  width:100%;
+  border-bottom:1px solid #CCCCCC;
+}
+ol.ui-buttons-tab {
+  height:25px;
+  vertical-align: bottom;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom:1px solid #5175A0;
+  border-top:1px dotted green;
+}
+ol.ui-buttons-tab li {
+  display:inline;
+  margin: 0;
+  margin-right: 2px;
+}
+ol.ui-buttons-tab li.ui-button-tab {
+  margin-top: 3px;
+}
+ol.ui-buttons-tab li.ui-button-tab-selected {
+  color:#000000;
+}
+
+.ui-pane-body {
+  background:transparent;
+  width:100%;
+}
+
+.ui-pane-title-label {
+  height:24px;
+  border:1px #EDEDED;
+  border-style:solid solid none;
+  /* MISSING: besseres Background-Image für Object-Browser-Leiste? */
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/uiPaneLabelBg.gif');
+}
+.ui-pane-title-label-compact {
+  height:17px;
+  border:1px solid #EDEDED;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/contentBg.jpg');
+}
+
+.ui-pane-title-label-simple-td {
+  width:20%;
+  text-align:right;
+}
+.ui-pane-title-label-simple-handle-view {
+  width:100%;
+}
+.ui-pane-title-label-simple-handle-view .lay-buttons-nav {
+  border-bottom:1px solid #5175A0;
+}
+
+.ui-pane-title-label-view {
+  text-align:right;
+  width:30%;
+}
+
+.ui-pane-title-label-label {
+  width:100%;
+  /*font-weight:bold;*/
+}
+.ui-pane-title-label-title {
+  font-size:9px;
+  /*font-weight:normal;*/
+}
+
+.ui-pane-bar {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/layButtonsCockpitBg.gif');
+  background-repeat:repeat-x;
+}
+table.ui-pane-title-buttons {
+  width:100%;
+  height:24px;
+  border:1px solid #EDEDED;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/layButtonsTitleBg.gif');
+  background-repeat:repeat-x;
+}
+.ui-pane-title-buttons-compact {
+  height:17px;
+  width:100%;
+}
+.ui-pane-title-buttons-nav {
+  width:80%;
+}
+.ui-pane-title-buttons-nav form {
+  margin:0px;
+}
+.ui-pane-title-buttons-help {
+  width:20%;
+  text-align:right;
+}
+.ui-pane-title-buttons-help form {
+  margin:0px;
+}
+
+
+/* ui-list */
+
+/* Rahmen um Element auf ganze Breite wie ui-list
+*/
+.ui-list {
+  width: 100%;
+  /* MISSING: geforderte min. breite sprengt die Ansichten mit listen
+    nebeneinander, bspw. sheet-open
+  min-width: 650px;*/
+  border: 1px solid #CCCCCC;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+.ui-list,
+.ui-list-list {
+  /* MISSING: Nur im tbody den background zeigen, nicht in thead */
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/uiListBg.jpg');
+  background-repeat: repeat-x;
+}
+.ui-list + .ui-list {
+  margin-top: 10px;
+}
+.ui-list-title {
+  /*background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/uiTableLabelBg.gif');*/
+  /*font-size:11px;*/
+  background-color:#718394;
+  height: 24px;
+  padding:3px 4px;
+  white-space:nowrap;
+}
+.ui-list-title .ui-any-meta-image img {
+  /* ohne icons in listen kopf, vgl. pad3/input.co */
+  display:none;
+}
+.ui-list-value {
+  background-color: transparent;
+}
+
+.ui-list-value-label,
+.ui-list-value-value {
+  /*font-size:11px;*/
+  line-height:16px;
+  border-bottom:1px solid #CCCCCC;
+  background-color: transparent;
+  padding:1px 5px 1px 4px;
+  vertical-align:middle;
+  height: 24px;
+  color:#000000;
+}
+.ui-list-value-label {
+  /* gg. Flattersatz bei mehreren lists */
+  min-width:140px;
+}
+.ui-list-value-value {
+  color:#979797;
+  width:100%;
+}
+.ui-list-value-cell {
+  width:100%;
+  border:0px;
+}
+.ui-list-other-label,
+.ui-list-other-value {
+  padding:1px 4px;
+}
+
+.ui-list-separator {
+  /*font-size:11px;*/
+  color:#FFFFFF;
+  background-color:#8997A6;
+  border:1px #CCCCCC;
+  border-style:none none solid;
+  padding:1px 4px;
+  height: 24px;
+}
+
+/* ui-table */
+
+.ui-table {
+  background-color:#FFFFFF;
+  border:1px #EDEDED;
+}
+.ui-table-title {
+  background-color:#718394;
+  border:1px #CCCCCC;
+  border-style:solid solid none;
+  padding:3px 4px;
+  height: 24px;
+  /*font-size: 11px;*/
+}
+.ui-table-content {
+  border-collapse:collapse;
+  empty-cells:show;
+  border:1px solid #CCCCCC;
+}
+.ui-table-content {
+  /* MISSING: Nur im tbody den background zeigen, nicht in thead */
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/uiListBg.jpg');
+  background-repeat:repeat-x;
+}
+.ui-table-content tr:hover {
+  background-color:#C4CBD2;
+}
+.ui-table-content tr:hover td.ui-value-even-data,
+.ui-table-content tr:hover td.ui-value-odd-data,
+.ui-table-content tr:hover td.ui-value-even-label,
+.ui-table-content tr:hover td.ui-value-odd-label,
+.ui-table-content tr:hover td.ui-table-plain-td-even-data,
+.ui-table-content tr:hover td.ui-table-plain-td-odd-data {
+  background-color:transparent;
+}
+
+.liny-ui-row-border,
+.liny-ui-col-fancy {
+  /* MISSING: Entsorgen falls Umstellung ui:table type=fancy auf css */
+  background-color:#CCCCCC;
+}
+.ui-row-fancy {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/uiTableFancyRowBg.gif');
+  background-repeat:repeat-x;
+}
+
+/* ui-value */
+
+.ui-value-fancy-data,
+.ui-value-fancy-label {
+  padding:5px 10px;
+}
+.ui-value-fancy-data span[location=label] {
+  /*font-weight:bold;*/
+}
+
+.ui-value-all-label {
+  font-size:11px;
+}
+.ui-value-all-title {
+  /*font-size:9px;*/
+}
+.ui-value-all-help {
+  font-size:9px;
+}
+.ui-value-all-open-about {
+  font-size:9px;
+}
+.ui-value-all-time-description {
+  font-size:9px;
+}
+
+/* ui-value-<rowType>-<columnType> */
+.ui-value-first-label {
+  color:#FFFFFF;
+  /*font-size:11px;*/
+  /*font-weight:bold;*/
+  background-color:#8997A6;
+  border:solid #CCCCCC;
+  border-width:0px 1px 0px;
+  padding:3px 4px;
+  white-space:nowrap;
+  height: 24px;
+}
+.ui-value-first-label .ui-value-label-a,
+.ui-value-first-label a,
+.ui-value-first-label a:hover,
+.ui-value-first-label a:visited,
+.ui-value-first-label .ui-value-all-label {
+  /*font-size:11px;*/
+  /*font-weight:bold;*/
+  /* NICHT Zusatzpadding padding:5px 10px; */
+  color:#FFFFFF;
+  vertical-align:top;
+}
+
+/* weiße Label-Links bei blauem Tabellen- oder Listen-Label-Hintergrund;
+(Links in ui-value-value werden ansonsten schwarz gerendert) */
+.ui-value-first-label .ui-value-value a,
+.ui-value-first-label .ui-value-value a:link,
+.ui-value-first-label .ui-value-value a:hover,
+.ui-value-first-label .ui-value-value a:visited,
+.ui-value-first-label .ui-value-value,
+.ui-list-title,
+.ui-list-title .ui-value-label-a {
+  /*font-size:11px;*/
+  /*font-weight:bold;*/
+  color:#FFFFFF;
+}
+
+.ui-value-even-data a,
+.ui-value-odd-data a,
+.ui-value-even-data a:link,
+.ui-value-odd-data a:link,
+.ui-value-even-data a:hover,
+.ui-value-odd-data a:hover,
+.ui-value-even-data a:visited,
+.ui-value-odd-data a:visited,
+.ui-value-even-data a:active,
+.ui-value-odd-data a:active {
+  /*font-size:11px;*/
+  /* font-weight:bold; */
+  color:#C30F08;
+  text-decoration:none;
+}
+
+.ui-value-even-label a,
+.ui-value-odd-label a,
+.ui-value-even-label a:link,
+.ui-value-odd-label a:link,
+.ui-value-even-label a:hover,
+.ui-value-odd-label a:hover,
+.ui-value-even-label a:visited,
+.ui-value-odd-label a:visited,
+.ui-value-even-label a:active,
+.ui-value-odd-label a:active {
+  /*font-size:11px;*/
+  /* font-weight:bold; */
+  color:#C30F08;
+  text-decoration:none;
+}
+
+.ui-value-first-data,
+.ui-value-even-data,
+.ui-value-odd-data {
+  /*font-size:11px;*/
+  line-height:16px;
+  border:1px solid #CCCCCC;
+  padding:1px 4px;
+  background-color:transparent;
+  height: 24px;
+}
+.ui-value-even-label,
+.ui-value-odd-label {
+  /*font-size:11px;*/
+  line-height:16px;
+  border:1px solid #CCCCCC;
+  padding:1px 4px;
+  background-color:transparent;
+  height: 24px;
+}
+/*  auch tableinhalte die nicht in ui-value liegen. Jedoch mit minimal padding!  */
+.ui-table-plain-td-even-data,
+.ui-table-plain-td-odd-data {
+  border:1px solid #CCCCCC;
+  padding:1px;
+  background-color:transparent;
+}
+.handle td {
+  /*font-size:11px;*/
+}
+
+.message{
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px;
+}
+.message.info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+.message.success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.message.warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.message.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+/* ui-bars */
+
+.ui-bar-table td {
+  background-color: inherit;
+}
+
+/* ui-buttons */
+
+.ui-buttons.type-inline,
+.ui-buttons.type-classic,
+.ui-buttons.type-script {
+   vertical-align:middle;
+   white-space:nowrap;
+}
+
+
+.ui-buttons-tab {
+  border:0px;
+}
+.ui-buttons-tab-td {
+  vertical-align:bottom;
+}
+.ui-buttons-tab-td.ui-button {
+  float: left;
+  list-style-type: none;
+  margin-left: 2px;
+  text-align: center;
+  min-width: 167px;
+  min-height: 23px;
+}
+.ui-buttons-tab-table {
+  width:100%;
+  border:0px;
+}
+.ui-buttons-tab-space {
+  background-color:#FF0000;
+}
+.ui-buttons-tab-table-td {
+  vertical-align:top;
+  width:100%;
+}
+.ui-buttons-tab-table-left {
+  text-align:left;
+  height:100%;
+}
+.ui-buttons-tab-table-right {
+  text-align:right;
+  height:100%;
+}
+.ui-buttons-tab-table-center {
+  min-width: 167px;
+}
+.ui-buttons-tab-table-center, .ui-buttons-tab-table-center a, .ui-buttons-tab-table-center a:hover {
+  text-align:center;
+  font-size: 13px;
+  color: #ffffff;
+}
+.ui-buttons-tab-table-space {
+  height:3px;
+}
+.ui-buttons-tab-table-null {
+  height:100%;
+  border:0px;
+}
+.ui-button-tab, .ui-button-tab-selected {
+  background: transparent url("../image/layout/mainnavi_bg.png") no-repeat scroll;
+  display: block;
+  min-height: 16px;
+  padding: 7px 0;
+  color: #ffffff !important;
+}
+.ui-button-tab a {
+  color: #ffffff !important;
+  text-decoration:none;
+}
+.ui-button-tab-selected {
+  background: #660303 url("../image/layout/mainnavi_bg_active.png") no-repeat scroll;
+}
+.ui-button-tab-disabled {
+  /* MISSING noch anpassen an neues design */
+  background-color:#CCCCCC;
+  color:#979797;
+  font-size:9pt;
+  font-style:italic;
+  padding:3px 3px;
+  border:1px solid #CCCCCC;
+  border-bottom:1px solid #CCCCCC;
+}
+.ui-buttons-tab-separator {
+  border-bottom:1px solid #CCCCCC;
+}
+
+/* ui-button-label<-selected><-disabled><-em> */
+.ui-button-label {
+}
+.ui-button-label-disabled {
+  color:#979797;
+}
+.ui-button-label-selected,
+.ui-button-label-selected a,
+.ui-button-label-selected a:active,
+.ui-button-label-selected a:link,
+.ui-button-label-selected a:visited,
+.ui-button-label-selected a:hover,
+.ui-button-label-em,
+.ui-button-label-em a,
+.ui-button-label-em a:active,
+.ui-button-label-em a:link,
+.ui-button-label-em a:visited,
+.ui-button-label-em a:hover {
+  /*font-weight:bold;*/
+}
+.ui-buttons-menu {
+  border:1px solid #CCCCCC;
+  width:250px;
+}
+.ui-buttons-menu-label {
+  border:1px #EDEDED;
+  border-style:none none solid;
+  background-color:#718394;
+  /*font-weight:bold;*/
+  color:#FFFFFF;
+  padding:5px;
+}
+.ui-buttons-menu-label a {
+  /*font-weight:bold;*/
+  /* NICHT Zusatzpadding padding:5px 10px; */
+  color:#FFFFFF;
+  vertical-align:top;
+}
+.ui-buttons-menu-data {
+  /* MISSING: Nur im tbody den background zeigen, nicht in thead */
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/uiListBg.jpg');
+  background-repeat: repeat-x;
+}
+.ui-button-menu-table {
+  width:100%;
+  /* MISSING: element-style mit mouse-out steht hier anderer Farbe im Weg */
+  border-top:solid 1px #FFFFFF;
+  border-bottom:solid 1px #FFFFFF;
+}
+.ui-button-menu-space {
+  width:5px;
+}
+.ui-button-menu-icon {
+  vertical-align:top;
+  text-align:left;
+  width:26px;
+  padding-right:3px;
+}
+
+.ui-ui-button-menu-td {
+  width:100%;
+}
+.ui-button-menu-separator {
+  padding-left:10px;
+  border-top:1px solid #CCCCCC;
+}
+.ui-button-menubar-td {
+  height:100%;
+  vertical-align:middle;
+}
+.ui-button-menubar a {
+  color:#000000;
+}
+.ui-button-nav {
+  /*background-color:#CCCCCC;
+  border:1px solid #5175A0;*/
+}
+
+/* ui-formbuttons */
+
+.ui-formbutton,
+input[type="submit"] {
+  color: #000000;
+  height: 20px;
+  border:1px solid #7F9DBA;
+  font-size: 11px;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/buttonBg.jpg');
+  background-repeat: repeat-x;
+  padding: 0px 5px 3px;
+  margin: 3px 4px 3px 0px;
+}
+.ui-formbutton:hover,
+input[type="submit"]:hover {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/buttonActiveBg.jpg');
+}
+
+/* ui-any */
+
+.ui-any-meta {
+  border:0px;
+}
+.ui-any-meta td {
+  padding-left:0px;
+  padding-right:2px;
+}
+.ui-any-labelTitle,
+.ui-any-labelTitle-label {
+    /*font-weight:bold;*/
+  color:#FFFFFF;
+}
+.ui-any-labelTitle-space {
+  display: none;
+}
+
+/* Message-Feld u.a. bei Fehlermeldungen */
+.ui-control-value-message-text {
+  background-color:#F5F5F5;
+  border-color:#979797;
+  margin-bottom: 13px;
+}
+.ui-control-message-help {
+  font-size: 11px;  /* explizit wg. lib */
+  color: #979797;
+}
+
+/* cal layout */
+.cal2-entry td,
+.cal2-entry .handle td,
+.cal2-entry .handle a {
+  font-size:10px;
+}
+.cal2-entry .handle {
+  border-spacing:0px;
+}
+.cal2-entry-icon {
+  padding:0px;
+}
+.cal2-entry-text {
+  padding:2px 0px 0px 0px;
+}
+.cal2-entry-icon img,
+.cal2-entry .handle img {
+  /* NICHT: kleinere Icons width:20px; */
+}
+
+.core-displays-pageframe {
+  padding: 0px;
+}
+
+/* asmt */
+
+.asmt-page,
+.asmt-page-isContent {
+  margin:0px;
+  padding:0px;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/pageBg.jpg');
+  background-repeat:repeat-x;
+  background-attachment:fixed;
+  background-color:white;
+}
+body.asmt-page,
+body.asmt-page-isContent {
+  padding:10px;
+  width:100%;
+  height:100%;
+}
+.asmt-page-table,
+.lay-page-content-box {
+  border:1px solid #D9D9D9;
+  background-color:white;
+  padding:10px;
+}
+.lay-page-content-box {
+  height: 95%; width: 95%;
+  position: fixed;
+  overflow: hidden;
+}
+div.lay-page-content-title {
+  font-weight: normal;
+  padding-top: 10px;
+}
+/* groups, valuation, session */
+
+.asmt-content-table {
+  border-spacing: 0px;
+}
+.asmt-content-title {
+  color:#CC6633;
+}
+
+.asmt-groups,
+table.asmt-valuation,
+table.asmt-requirements,
+.asmt-sessions,
+.asmt-session {
+  border-collapse:collapse;
+  empty-cells:show;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/uiListBg.jpg');
+  background-repeat: repeat-x;
+  background-color:#FFFFFF;
+  border:1px #EDEDED;
+}
+.asmt-session-content-title {
+  font-size:14px;
+  font-weight: normal;
+}
+.asmt-session-content-description {
+  font-size:11px;
+  font-style:normal;
+}
+.asmt-valuation {
+  /*border:0px;*/
+  background-color: transparent;
+}
+.asmt-valuation td,
+.asmt-session td {
+  font-size: 11px;
+  border:1px solid #CCCCCC;
+  padding:3px 4px;
+  background-color:transparent;
+  height: 24px;
+}
+.asmt-groups-title,
+td.asmt-valuation-title,
+.asmt-requirements-title,
+.asmt-sessions-table-title  {
+  background-color:#718394;
+  color:#FFFFFF;
+  padding:3px 4px;
+  height: 24px;
+}
+.asmt-valuation-status {
+  color:#C30F08;
+  font-weight:bold;
+}
+.asmt-sessions-title,
+td.asmt-session-title,
+td.asmt-session-title {
+  background-color:#8997A6;
+  color:#FFFFFF;
+  padding:3px 4px;
+  height: 24px;
+}
+.asmt-sessions-session td {
+  border:1px solid #CCCCCC;
+  padding:3px 4px;
+}
+.asmt-session-completed-true {
+  color:#000000;
+}
+.asmt-session-completed-false {
+  color:#000000;
+}
+
+.asmt-items-overview {
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/uiListBg.jpg');
+  background-repeat: repeat-x;
+  background-color:#FFFFFF;
+  border:1px #EDEDED;
+  width:100%;
+  border-collapse:collapse;
+}
+.asmt-items-overview-label {
+  background-color:#718394;
+  color:#FFFFFF;
+  padding:3px 4px;
+  height: 24px;
+}
+.asmt-item-overview {
+  border:1px solid #CCCCCC;
+  text-align:center;
+  padding:3px 4px;
+  background-color:#FFFFFF;
+}
+.asmt-item-overview-title {
+  border:1px solid #CCCCCC;
+  padding:3px 4px;
+  background-color:#FFFFFF;
+}
+
+table.asmt-items,
+.asmt-item {
+  width:100%;
+  border:2px solid #CCCCCC;
+}
+.asmt-item + .asmt-item {
+  margin-top: 10px;
+}
+.asmt-item td {
+  padding:5px;
+}
+.asmt-item-slider td {
+  padding:0px;
+}
+.asmt-item-marker-table {
+  border:0px;
+}
+.asmt-item-marker,
+.asmt-item-marker td {
+  padding:0px;
+  font-size: 11px;
+  color:#7F7F7F;
+  white-space:nowrap;
+}
+td.asmt-item-marker-section {
+  padding:0px;
+  background-color:#E7EAED;
+}
+.asmt-item-credits {
+  font-size: 11px; /* wg. lib */
+}
+td.asmt-item-section {
+  width:100%;
+  color:#7F7F7F;
+  background-color:#E7EAED;
+  vertical-align: middle;
+  padding: 0px 10px;
+}
+.asmt-item-section-sectiontitle {
+  font-size:11px;
+}
+td.asmt-item-question {
+  font-size:12px;
+  line-height: 22px;
+  padding: 10px 50px 10px 10px;
+  background-color:#C4CBD2;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/asmtItemQuestionmark.gif');
+  background-repeat:no-repeat;
+  background-position:right;
+}
+.item-question-description {
+  font-size:9px;
+}
+td.asmt-item-tail {
+  font-size: 11px;
+  padding: 10px;
+  background-color:#FFFFFF;
+}
+td.asmt-item-tail-help,
+td.asmt-info-tail-info {
+  font-size: 11px;
+  background-color:#FFFFFF;
+  padding: 10px;
+}
+.asmt-item-tail-content-question,
+.asmt-item-tail-content-question2 {
+  font-size:12px;
+  font-weight:normal;
+}
+.asmt-item-tail-false, .asmt-item-tail-true, .asmt-item-tail-missing {
+  font-size: 12px;
+  font-weight: normal;
+}
+.asmt-confirm {
+  font-size:11px;
+}
+.asmt-solutionfeedback {
+  color: #000000;
+  font-size: 11px;
+}
+.asmt-content-buttons input,
+.asmt-items-overview input {
+  /* analog ui-form-buttons ! */
+  color: #000000;
+  height: 20px;
+  border:1px solid #7F9DBA;
+  font-size: 11px;
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/buttonBg.jpg');
+  background-repeat: repeat-x;
+  padding: 0px 5px 3px;
+  margin: 3px 4px 3px 0px;
+}
+.asmt-content-buttons input:hover,
+.asmt-items-overview input:hover {
+  /* analog ui-form-buttons ! */
+  background-image:url('/ibt/eacad/area=module/style=eacad/paint=eacad/en/opt/mode/public/style/eacad/image/layout/buttonActiveBg.jpg');
+}
+
+/*
+*/
+
+.lay-page-content-box {
+  width: 100%;
+  height:100%;
+  border: none;
+  padding: 0px;
+  vertical-align: middle;
+}
+body.asmt-page-isContent {
+  padding: 0px;
+}
+
+.lay-page-content-nav {
+  border-top: 1px #728698 solid;
+  background-color: #bd0c0c;
+  height: 32px;
+  /*font-size: 13px;*/
+}
+.lay-page-content-nav td {
+  font-weight: bold;
+  color: white;
+}
+.lay-page-content-nav img {
+  vertical-align: middle;
+}
+.lay-page-content-nav a img {
+  width: 32px;
+  height: 32px;
+}
+.asmt-page-isContent .lay-page-content-nav a img {
+  margin: 2px 1px;
+}
+.asmt-page-isContent .lay-page-content-nav a img[name="overview"] {
+  margin-left: 5px;
+}
+
+.lay-page-splash-course-wbttitle-body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  width: 100%;
+  height: 39px !important;
+  border-bottom: 1px #728698 solid;
+  background: none !important;
+  background-color: #bd0c0c !important;
+  color: #FFFFFF;
+}
+.lay-page-splash-course-wbttitle-body .lay-page-splash-title {
+  display: none;
+}
+
+.sklm-lesson-title {
+  padding: 0px 6px;
+  /*border-bottom: 1px #728698 solid;*/
+}
+.sklm-lesson-title h1 {
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0px;
+}
+.sklm-lesson-title h2 {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+
+
+.vnl-page-subtitle {
+  font-size: 14px;
+  font-weight: normal;
+  padding: 2px 0px;
+}
+.lay-page-content-content {
+  bottom: 33px;
+}
+.vnl-content-title {
+  padding: 0px !important;
+}
+.vnl-content-title-subtitle {
+  padding: 0px !important;
+  height: 56px !important;
+}
+.vnl-content-title-audio {
+  padding: 0px !important;
+  height: 85px !important;
+}
+.vnl-content-title-subtitle-audio {
+  padding: 0px !important;
+  height: 101px !important;
+}
+.vnl-content-content-subtitle {
+  top: 56px !important;
+}
+.vnl-content-content-audio {
+  top: 85px !important;
+}
+.vnl-content-content-subtitle-audio {
+  top: 101px !important;
+}
+
+#vnl-page-audio {
+  background-color: $vnl.page.audio.bgcolor;
+  border-bottom: 1px solid #FF0000;
+  padding: 4px 10%;
+}
+
+.vnl-content-content .ui-table,
+.vnl-content-content .ui-list,
+.vnl-content-content .ui-message {
+  margin: 10px 0 0 10px;
+}
+
+
+div.user-details-content{
+  float: left;
+  width: 778px;
+  border-top: 3px solid #979797;
+  overflow: hidden;
+}
+body[dir=rtl] div.user-details-content{
+  float: right;
+}
+
+div.user-details-image-box{
+  background-color: #979797;
+  width: 200px;
+  padding: 2px;
+  text-align: center;
+  float: left;
+}
+div.user-details-image{
+  background-color: #FFFFFF;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  display:table-cell;
+  vertical-align:middle;
+}
+body[dir=rtl] div.user-details-image-box{
+  float: right;
+}
+
+div.user-details-value-icon{
+  float: left;
+  margin-right: 10px;
+  height: 65px;
+}
+body[dir=rtl] div.user-details-value-icon{
+  float: right;
+}
+
+div.user-details-value-icon-address{
+  float: left;
+  margin-right: 10px;
+  height: 85px;
+}
+body[dir=rtl] div.user-details-value-icon-address{
+  float: right;
+}
+
+
+div.user-details-value{
+  font-size: 12px;
+  color: #000000;
+  margin: 5px 0 20px 0 ;
+  height: 45px;
+  width: 300px;
+  word-wrap: break-word;
+}
+
+div.user-details-idle{
+  background-color: #979797;
+  color: #FFFFFF;
+  margin: 10px 0 1px 2px;
+  height: 15px;
+  text-align: left;
+  float: left;
+  font-size: 11px;
+}
+body[dir=rtl] div.user-details-idle{
+  float: right;
+}
+
+div.user-details-data{
+  float: left;
+  margin-left: 10px;
+  width: 450px;
+  margin: 5px 0 0 20px;
+}
+body[dir=rtl] div.user-details-data{
+  float: right;
+  margin: 5px 20px 0 0;
+}
+
+div.user-details-box-line{
+  border-top: 1px solid;
+  width: 600px;
+  height: 130px;
+  color: #979797;
+  overflow: hidden;
+}
+
+div.user-details-box-about-line{
+  border-top: 1px solid;
+  width: 600px;
+  height: 130px;
+  color: #979797;
+  overflow: auto;
+}
+
+div.user-details-box{
+  width: 600px;
+  color: #979797;
+}
+
+
+div.user-details-left{
+  width: 300px;
+  float: left;
+  word-wrap: break-word;
+}
+body[dir=rtl] div.user-details-left{
+  float: right;
+}
+div.user-details-right{
+  width: 300px;
+  margin-left: 300px;
+  word-wrap: break-word;
+}
+body[dir=rtl] div.user-details-right{
+  margin-right: 300px;
+  margin-left: 0;
+}
+
+div.user-details-label{
+  font-size: 11px;
+  color: #979797;
+  height: 20px;
+}
+
+div.user-details-name-value{
+  font-size: 12px;
+  color: #000000;
+  margin: 5px 0 20px 0 ;
+  font-weight: bold;
+}
+
+div.user-details-buttons{
+  margin: 10px 0 20px 0 ;
+}
+
+div.user-details-buttons a:hover{
+  text-decoration: none !important;
+}
+
+
+
+/* --------------------------------------------------------------
+*/
+
+.centraSystemcheck {
+
+}
+.centraSystemcheck .centraSystemcheckInfo {
+  width: 250px;
+  display: inline-block;
+  vertical-align: top;
+}
+.centraSystemcheck .centraSystemcheckIframe {
+  width: 500px;
+  height: 385px;
+  border:0;
+  overflow:hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  float: right;
+}
+body[dir=rtl] .centraSystemcheck .centraSystemcheckInfo {
+  margin-right: 20px;
+}
+body[dir=rtl] .centraSystemcheck .centraSystemcheckIframe {
+  float: left;
+}
+
+.centraButtons {
+  clear:both;
+  float: none;
+}
+
+.centraButtons .centraButtonFar {
+  display:inline-block;
+  float: right;
+}
+body[dir=rtl] .centraButtons .centraButtonFar {
+  float: left;
+}
+
+.button-primary {
+  color: #ffffff !important;
+  height: 14px;
+  padding: 3px 10px !important;
+  -moz-border-radius: 3px !important;
+  -webkit-border-radius: 3px !important;
+  border-radius: 3px !important;
+  -moz-background-clip: padding !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+  background-color: #c70f0f !important;
+  -moz-box-shadow: 1px 2px 1px rgba(0,0,0,.25) !important;
+  -webkit-box-shadow: 1px 2px 1px rgba(0,0,0,.25) !important;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.25) !important;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjE1Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjE1Ii8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+) !important;
+  background-image: -moz-linear-gradient(bottom, rgba(255,255,255,.15) 0%, rgba(0,0,0,.15) 100%) !important;
+  background-image: -o-linear-gradient(bottom, rgba(255,255,255,.15) 0%, rgba(0,0,0,.15) 100%) !important;
+  background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,.15) 0%, rgba(0,0,0,.15) 100%) !important;
+  background-image: linear-gradient(bottom, rgba(255,255,255,.15) 0%, rgba(0,0,0,.15) 100%) !important;
+}
+.button-primary:hover {
+  text-decoration: none !important;
+}
+
+/*
+
+*/
